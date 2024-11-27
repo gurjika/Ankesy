@@ -11,11 +11,12 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from datetime import timedelta
+import os
 from pathlib import Path
-
+from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+load_dotenv()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -43,6 +44,9 @@ INSTALLED_APPS = [
     'ankesy_api',
     'rest_framework',
 ]
+
+
+AUTH_USER_MODEL = 'core.user'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -73,15 +77,18 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ankesy.wsgi.application'
-
+DB_PASSWORD = os.environ.get('DB_PASSWORD')
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ankesy',
+        'USER': 'root',
+        'PASSWORD': DB_PASSWORD,
+        'HOST': 'mysql',   
     }
 }
 
