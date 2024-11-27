@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'djoser',
     'ankesy_api',
     'rest_framework',
+    'drf_yasg',
 ]
 
 

@@ -11,6 +11,7 @@ djangorestframework-simplejwt = "*"
 python-dotenv = "*"
 pillow = "*"
 mysqlclient = "*"
+drf-yasg = "*"
 
 [dev-packages]
 
