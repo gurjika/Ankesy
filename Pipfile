@@ -12,6 +12,7 @@ python-dotenv = "*"
 pillow = "*"
 mysqlclient = "*"
 drf-yasg = "*"
+gunicorn = "*"
 
 [dev-packages]
 
