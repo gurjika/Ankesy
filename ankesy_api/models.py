@@ -31,7 +31,9 @@ class Report(models.Model):
     medical_info = models.BooleanField(null=True)  
     personal_photos = models.BooleanField(null=True)  
 
-    
+    parent_email = models.EmailField()
+
+
     type = models.CharField(
         max_length=3, 
         choices=ScamType.choices
