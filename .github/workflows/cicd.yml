@@ -25,6 +25,7 @@ jobs:
               cd Ankesy
               echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" > .env
               echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
+              echo "EMAIL_HOST_PASSWORD=${{ secrets.EMAIL_HOST_PASSWORD }}" >> .env
 
               
 
