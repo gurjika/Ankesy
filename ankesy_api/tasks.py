@@ -7,12 +7,12 @@ from django.template.loader import render_to_string
 
 
 @shared_task
-def send_email_to_parent(data, email):
+def send_email_to_parent(data, email, label):
 
         # Send the email
         if data.get('opened'):
             data.pop('opened')
-            html_content = render_to_string('email_template.html', {'data': data})
+            html_content = render_to_string('email_template.html', {'data': data, 'label': label})
             email = EmailMultiAlternatives(
                 subject="Revealed Information for Review",
                 body="This is an important message regarding flagged information.",
@@ -25,10 +25,11 @@ def send_email_to_parent(data, email):
               
             email = EmailMultiAlternatives(
             subject="Information was not revealed",
-            body="",
+            body=f"Scam Type: {label}",
             from_email="<info@ankesy.com>",
             to=[email],
             )
+            
             email.send(fail_silently=False)
               
 

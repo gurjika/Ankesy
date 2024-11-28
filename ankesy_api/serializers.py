@@ -21,8 +21,9 @@ class ReportSerializer(serializers.ModelSerializer):
     
 
     def create(self, validated_data):
-        print(validated_data)
         email = validated_data['parent_email']
         flagged_data = {key: "Yes" for key, value in validated_data.items() if value is True}
-        send_email_to_parent.apply_async((flagged_data, email))
-        return super().create(validated_data)
+
+        obj = Report.objects.create(**validated_data)        
+        send_email_to_parent.apply_async((flagged_data, email, obj.get_type_display()))
+        return obj

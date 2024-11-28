@@ -4,7 +4,7 @@ from django.db import models
 
 
 class ScamType(models.TextChoices):
-    PRIZE = 'PRZ', 'Prize'
+    PRIZE = 'PRZ', 'Prize Scam'
     PHISHING = 'PHI', 'Phishing'
     TECH_SUPPORT = 'TSP', 'Tech Support Scam'
     ROMANCE = 'ROM', 'Romance Scam'
