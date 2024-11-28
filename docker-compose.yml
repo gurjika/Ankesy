@@ -49,20 +49,20 @@ services:
 
 
     depends_on:
-      # - mysql
+      - mysql
       - redis
-      # - celery
+      - celery
 
     restart: on-failure
 
-  # celery:
-  #   build: .
-  #   command: celery -A poolhub worker --loglevel=info
-  #   volumes:
-  #     - .:/app
-  #   depends_on:
-  #     redis:
-  #       condition: service_healthy
+  celery:
+    build: .
+    command: celery -A ankesy worker --loglevel=info
+    volumes:
+      - .:/app
+    depends_on:
+      redis:
+        condition: service_healthy
       
       
 

@@ -13,6 +13,8 @@ pillow = "*"
 mysqlclient = "*"
 drf-yasg = "*"
 gunicorn = "*"
+celery = "*"
+redis = "*"
 
 [dev-packages]
 
