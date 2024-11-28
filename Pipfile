@@ -12,6 +12,8 @@ python-dotenv = "*"
 pillow = "*"
 mysqlclient = "*"
 drf-yasg = "*"
+celery = "*"
+redis = "*"
 
 [dev-packages]
 
