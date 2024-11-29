@@ -15,6 +15,7 @@ drf-yasg = "*"
 gunicorn = "*"
 celery = "*"
 redis = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
