@@ -29,7 +29,7 @@
 
 ## Tech Stack
 
-- **Backend Framework:** Django  
+- **Backend Framework:** Django Rest Framework
 - **Database:** Mysql  
 - **Task Queue:** Celery with Redis  
 - **Web Server:** Nginx  
@@ -41,14 +41,6 @@
 ## Setup and Installation
 
 Follow the steps below to set up and run the project on your local machine.
-
-### Prerequisites
-
-- Python 3.10+
-- Docker & Docker Compose
-- Redis
-- PostgreSQL
-- Nginx
 
 ### Installation
 
