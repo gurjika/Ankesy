@@ -23,14 +23,15 @@ class Report(models.Model):
     id_number = models.BooleanField(null=True)
     credit_card = models.BooleanField(null=True)
     address = models.BooleanField(null=True)
-    phone_number = models.BooleanField()
+    phone_number = models.BooleanField(null=True)
     email = models.BooleanField(null=True) 
     bank_account = models.BooleanField(null=True) 
     password = models.BooleanField(null=True) 
     social_media = models.BooleanField(null=True) 
     medical_info = models.BooleanField(null=True)  
     personal_photos = models.BooleanField(null=True)  
-
+    timestamp = models.DateTimeField(auto_now_add=True)
+    
     parent_email = models.EmailField()
 
 
