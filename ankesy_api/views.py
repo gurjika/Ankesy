@@ -27,3 +27,8 @@ class ListReportViewSet(ListModelMixin, RetrieveModelMixin, GenericViewSet):
     def get_queryset(self):
         return Report.objects.filter(parent_email=self.request.user.email)
     
+
+
+class ListAllReportViewSet(ListModelMixin, GenericViewSet):
+    serializer_class = ReportSerializer
+    queryset = Report.objects.all()
