@@ -31,4 +31,4 @@ class ListReportViewSet(ListModelMixin, RetrieveModelMixin, GenericViewSet):
 
 class ListAllReportViewSet(ListModelMixin, GenericViewSet):
     serializer_class = ReportSerializer
-    queryset = Report.objects.all().order_by('timestamp')
+    queryset = Report.objects.all().order_by('-timestamp')
