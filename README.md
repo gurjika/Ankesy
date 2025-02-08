@@ -1,6 +1,6 @@
 # Ankesy
 
-**Ankesy** is a scam reporting platform designed to help users identify and track scams by submitting detailed reports about potential fraudulent activities. The platform supports automated email notifications to inform parents or guardians about revealed information and categorized scam types.  
+**Ankesy** is a scam reporting platform designed to help users identify and track scams by submitting detailed reports about potential fraudulent activities. The platform supports automated email notifications to inform parents or guardians about revealed information and categorized scam types. Devleloped for 2 day Medialab hackathon.
 
 ## Features
 
